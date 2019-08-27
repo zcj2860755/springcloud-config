@@ -37,6 +37,10 @@ swagger:
   enable: true
 
 
+env:
+  dev
+
+
 #hystrix:
 #  command:
 #    default:  #default全局有效，service id指定应用有效
@@ -47,3 +51,4 @@ swagger:
 #        isolation:
 #          thread:
 #            timeoutInMilliseconds: 6000 #断路器超时时间，默认1000ms
+
