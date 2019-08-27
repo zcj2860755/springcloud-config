@@ -35,11 +35,6 @@ spring:
       max-active: 20
       max-wait: 60000
 
-  rabbitmq:
-    host: 127.0.0.1
-    port: 5672
-    username: guest
-    password: guest
 
   #关闭热部署日志
   devtools:
