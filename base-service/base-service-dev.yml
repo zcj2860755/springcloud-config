@@ -49,6 +49,16 @@ feign:
   httpclient:
     enabled: true
 
+#关闭安全认证
+management:
+  security:
+    enabled: false
+  #refresh接入点显式暴露出来
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info
+
 #打印执行的sql
 logging:
   level:

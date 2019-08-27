@@ -1,0 +1,31 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://122.224.145.42:8804/nbiot/springcloud-config.git     # 配置git仓库的地址 gitlab 账号和密码登录
+          search-paths: /**                                      # git仓库地址下的相对地址，可以配置多个，用,分割。
+          username: zhangchangjiang                              # git仓库的账号（私有库必填） gitlab 账号和密码登录
+          password:  2860755zcj                                            # git仓库的密码（私有库必填）
+      label: master                                              #配置git仓库的分支
+  #关闭热部署日志
+  devtools:
+    restart:
+      log-condition-evaluation-delta: false
+
+
+  #关闭安全认证
+management:
+  security:
+    enabled: false
+  #refresh接入点显式暴露出来
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh,refresh,health,info
+

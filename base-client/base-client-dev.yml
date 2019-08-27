@@ -23,7 +23,15 @@ spring:
       log-condition-evaluation-delta: false
 
 
-
+#关闭安全认证
+management:
+  security:
+    enabled: false
+  #refresh接入点显式暴露出来
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info
 #开启Hystrix
 feign:
   hystrix:
@@ -39,6 +47,7 @@ swagger:
 
 env:
   test-123
+
 
 
 #hystrix:
