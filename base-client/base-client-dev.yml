@@ -47,7 +47,9 @@ swagger:
 
 env:
   dev-789
-
+#打印执行的sql
+logging:
+  path: ${spring.application.name}
 
 
 #hystrix:
