@@ -38,7 +38,7 @@ swagger:
 
 
 env:
-  dev-1
+  test-1
 
 
 #hystrix:
