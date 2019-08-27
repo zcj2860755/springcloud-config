@@ -22,6 +22,12 @@ spring:
     restart:
       log-condition-evaluation-delta: false
 
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
 
 #开启Hystrix
 feign:
