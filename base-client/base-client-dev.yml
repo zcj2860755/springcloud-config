@@ -38,7 +38,7 @@ swagger:
 
 
 env:
-  beat
+  test
 
 
 #hystrix:
