@@ -4,28 +4,11 @@ server:
 spring:
   application:
     name: zuul-server
-  main:
-    allow-bean-definition-overriding: true
+
   #关闭热部署日志
   devtools:
     restart:
       log-condition-evaluation-delta: false
-
-
-#关闭安全认证
-management:
-  security:
-    enabled: false
-  #refresh接入点显式暴露出来
-  endpoints:
-    web:
-      exposure:
-        include: refresh,health,info
-
-#打印执行的日志
-logging:
-  path: ${spring.application.name}
-
 
 zuul:
   routes:
@@ -41,4 +24,3 @@ zuul:
     github:
       path: /github/**
       url: https://github.com/
-
